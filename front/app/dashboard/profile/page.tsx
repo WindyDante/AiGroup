@@ -62,26 +62,28 @@ export default function ProfilePage() {
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
 
     // Simulate API call
     setTimeout(() => {
       // Update user in localStorage
       const updatedUser = {
-        ...user,
+        ...user!,
         ...formData,
-      }
-      localStorage.setItem("user", JSON.stringify(updatedUser))
-      setUser(updatedUser)
+        avatar: user!.avatar, // 确保包含 avatar 字段
+        id: user!.id, // 确保包含 id 字段
+      };
+      localStorage.setItem("user", JSON.stringify(updatedUser));
+      setUser(updatedUser);
 
-      setIsLoading(false)
+      setIsLoading(false);
       toast({
         title: "个人资料已更新",
         description: "您的个人资料信息已成功保存",
-      })
-    }, 1000)
-  }
+      });
+    }, 1000);
+  };
 
   return (
     <div className="container py-12">

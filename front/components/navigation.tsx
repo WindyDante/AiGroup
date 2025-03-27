@@ -84,7 +84,7 @@ const Navigation = () => {
     {
       label: "API设置",
       icon: Settings,
-      href: "/dashboard/settings",
+      href: "/dashboard/settings/api",
       color: "text-gray-500",
     },
   ]

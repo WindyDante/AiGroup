@@ -7,6 +7,7 @@ import { useToast } from '@/components/ui/use-toast'
 const publicPaths = [
     '/login',
     '/',
+    '/forgot-password',
 ]
 
 export default function AuthGuard({ children }: { children: React.ReactNode }) {

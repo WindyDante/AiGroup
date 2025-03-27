@@ -122,7 +122,7 @@ export default function LoginPage() {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <Label htmlFor="password">密码</Label>
-                      <Button variant="link" className="px-0 text-xs">
+                      <Button variant="link" className="px-0 text-xs" onClick={() => router.push('/forgot-password')}>
                         忘记密码?
                       </Button>
                     </div>
